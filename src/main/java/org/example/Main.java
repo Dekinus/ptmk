@@ -118,7 +118,7 @@ public class Main {
         String[] genders = {"M", "F"};
         for (String gender : genders) {
             for (char c = 'A'; c <= 'Z'; c++) {
-                for (int i = 0; i < perLetter; i++) {
+                for (int i = 0; i <= perLetter; i++) {
                     String surname = c + generateRandomString(rand, 5);
                     String name = generateRandomString(rand, 4);
                     String patronymic = generateRandomString(rand, 6);
@@ -129,6 +129,7 @@ public class Main {
                 }
             }
         }
+        employees = employees.subList(0,employees.size()-12);
 
         for (int i = 0; i < 100; i++) {
             String surname = "F" + generateRandomString(rand, 5);
